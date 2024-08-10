@@ -13,6 +13,11 @@
   }
 
   /* Shared styles */
+
+  main{
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .display-flex {
     display: flex;
   }
@@ -46,7 +51,7 @@
     
   }
 
-  section{
+  main> section{
     padding-top: 130px;
     padding-bottom: 130px;
   }
@@ -137,6 +142,86 @@
     color:rgb(255, 144, 14);
     font-weight: 700; 
   }
+
+/* Features You Section Styles */
+.features-you{
+  gap: 140px;
+}
+.features-you-title{
+  border-left: 5px solid rgb(255, 144, 14);
+  padding-left: 20px;
+}
+.features-content-box{
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  background: rgb(255, 255, 255);
+  margin-bottom: 20px;
+}
+.features-content-box-title{
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.features-btn{
+  padding: 20px 20px;
+  width: 342px;
+  height: 200px;
+  margin-top: -75px;
+}
+.btn-text{
+  font-size: 65px;
+}
+
+
+  /* Fact Section Styles */
+  .fact-description{
+    max-width: 540px;
+  }
+  .some-fact-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .fact-card{
+    box-sizing: border-box;
+    border: 1px solid rgb(255, 144, 14);
+    border-radius: 8px;
+    padding: 45px 60px 36px 36px;
+    text-align: center;
+    width: 241px;
+    height: 241px;
+  }
+  .fact-number{
+    font-size: 45px;
+    font-weight: 700;
+  }
+  .fact-name{
+    font-size: 15px;
+    color:rgb(114, 114, 114);
+  }
+
+  /* Sponsor section Styles */
+
+  .sponsor-contents{
+    max-width: 542px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sponsor-logos{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .sponsor-logo{
+    filter: grayscale(100%);
+  }
+
+
+
+
+
+
   /* Responsive Styles */
   @media screen and (max-width:576px) {
     .nav-bar, .nav-links, .team{
@@ -150,6 +235,22 @@
     .feature{
             margin: 20px 10px;
           }
+
+    .some-facts{
+      padding: 10px;
+    }
+    .fact-description{
+            max-width: 100%;
+          
+          }
+    .some-fact-cards, .sponsor-logos{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      justify-items: center;
+
+  }
+
   }
 
   @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -159,5 +260,11 @@
     .feature{
         margin: 50px auto;
       }
+    .some-fact-cards, .sponsor-logos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        
+  }
   }
 
